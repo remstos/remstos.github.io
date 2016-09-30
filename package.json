@@ -1,10 +1,10 @@
 {
-  "name": "react-simple",
+  "name": "remisantos",
   "version": "0.0.1",
-  "description": "Simple React app",
+  "description": "Remi Santos",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kemcake/react-simple"
+    "url": "https://github.com/kemcake/kemcake.github.io"
   },
   "license": "MIT",
   "browser": {},
