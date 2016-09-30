@@ -18,15 +18,6 @@ module.exports = {
       images: path.join(__dirname, '/app/assets/images')
     }
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('development')
-      }
-    }),
-    new webpack.NoErrorsPlugin()
-  ],
   module: {
     loaders: [{
       test: /\.js$/,
@@ -42,5 +33,14 @@ module.exports = {
       test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
       loader: 'file?name=images/[hash].[ext]'
     }]
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('development')
+      }
+    }),
+    new webpack.NoErrorsPlugin()
+  ]
 };
