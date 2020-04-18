@@ -33,15 +33,7 @@ module.exports = {
       loader: ExtractTextPlugin.extract("style-loader", "css-loader")
     }, {
       test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file-loader',
-      use: [
-        {
-          options: {
-            name: '[hash].[ext]',
-            outputPath: 'fonts/'
-          }
-        }
-      ]
+      loader: 'file?name=fonts/[hash].[ext]'
     }, {
       test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
       loader: 'file?name=images/[hash].[ext]'
