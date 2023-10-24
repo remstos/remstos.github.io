@@ -1,9 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Router, Route, IndexRoute, browserHistory} from 'react-router'
+import { HashRouter, Route, Switch } from "react-router-dom";
 
 /* Routes components */
-import App from './components/App'
 import Home from './components/Home'
 import Page404 from './components/Page404'
 import AppStoreTermsPrivacy from './components/AppStoreTermsPrivacy'
@@ -12,12 +11,11 @@ import AppStoreTermsPrivacy from './components/AppStoreTermsPrivacy'
 require('./../assets/styles/main.less')
 
 ReactDOM.render((
-  <Router history={browserHistory}>
-    <Route component={App} path='/'>
-      <IndexRoute component={Home}/>
-      <Route path='/apps/*/terms-privacy' component={AppStoreTermsPrivacy}/>
-      <Route path='*' component={Page404}/>
-    </Route>
-
-  </Router>
+  <HashRouter>
+    <Switch>
+      <Route path='/' exact component={Home} />
+      <Route path='/apps/*/terms-privacy' component={AppStoreTermsPrivacy} />
+      <Route path='/*' component={Page404} />
+    </Switch>
+  </HashRouter>
 ), document.getElementById('app'))

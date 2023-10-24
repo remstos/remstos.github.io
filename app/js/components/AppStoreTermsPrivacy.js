@@ -17,7 +17,7 @@ export default class AppStoreTermsPrivacy extends React.Component {
   }
 
   render() {
-    let paths = window.location.pathname.split("/")
+    let paths = window.location.hash.split("/")
     if (paths.length < 3) {
         return this.renderEmpty()
     }
