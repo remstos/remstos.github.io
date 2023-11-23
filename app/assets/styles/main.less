@@ -136,6 +136,7 @@ body {
 
 // TOP & BOTTOM Links
 a.link {
+  display: inline-block;
   font-weight: 600;
   margin-right: 50px;
   color: @text-color;
@@ -154,22 +155,67 @@ a.link .hover-text {
   display: block;
   position: absolute;
   height: 30px;
-  top: -30px;
+  top: -25px;
   width: 200px;
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -moz-transition: opacity 0.3s ease-in-out;
-  -ms-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 a.link:hover .hover-text {
   opacity: 0.7;
+  top: -30px;
 }
 a.link.disabled {
   text-decoration: line-through;
 }
-
+a.link .hover-box {
+  display: block;
+  position: absolute;
+  width: 340px;
+  // height: 140px;
+  top: -170px;
+  left: -120px;
+  // background: linear-gradient(-46deg, #ECFEFF 23.13%, #FFE3E3 99.38%);
+  background: rgba(0, 0, 0, 0.3);
+  // opacity: 0.6;
+  border-radius: 22px;
+  padding: 20px 20px 20px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  a {
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 30px;
+    color: white;
+    &:hover {
+      text-decoration: underline;
+    }
+    img {
+      width: 20px; height: 20px; 
+      border-radius: 22%; 
+      overflow: hidden; display: inline-block; 
+      vertical-align: middle;
+      margin-right: 10px;
+      margin-bottom: 3px;
+    }
+  }
+}
+.hover-box ul {
+  list-style: none;
+}
+a.link:hover .hover-box {
+  opacity: 1.0;
+  top: -180px;
+}
 
 .topContainer {
   position: absolute;
@@ -193,8 +239,13 @@ a.link.disabled {
   @media screen and (min-width: @small-device-width) {
     a.link .hover-text {
       top: auto;
-      bottom: -30px;
+      bottom: -25px;
       left: 0px;
+    }
+
+    a.link:hover .hover-text {
+      top: auto;
+      bottom: -30px;
     }
   }
 
@@ -215,6 +266,13 @@ a.link.disabled {
     flex-direction: column-reverse;
     a {
       margin-top: 30px;
+    }
+    a.link .hover-box {
+      opacity: 1;
+      position: relative;
+      top: auto;
+      left: auto;
+      margin-top: 20px;
     }
   }
 }
