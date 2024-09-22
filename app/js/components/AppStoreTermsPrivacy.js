@@ -9,7 +9,7 @@ export default class AppStoreTermsPrivacy extends React.Component {
   }
 
   isValidAppName(appName) {
-    return ["likeness", "teamzone", "derush", "memojiclock"].includes(appName.toLowerCase())
+    return ["likeness", "teamzone", "derush", "memojiclock", "burnit"].includes(appName.toLowerCase())
   }
 
   capitalizeFirstLetter(string) {

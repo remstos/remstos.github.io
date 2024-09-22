@@ -18,7 +18,7 @@ export default class Home extends React.Component {
           <div className='titlesContainer'>
           <h1 className='title'>REMI.<br/>S<span className='transparent'>AN</span>T<span className='transparent'>OS</span></h1>
           <h2 className='subtitle'>
-            Senior iOS/macOS Engineer @ <a href='https://beamapp.co' target='_blank'>Beam</a><br/>
+            Senior iOS/macOS Engineer @ <a href='https://hearthands.tech' target='_blank'>Heart Hands, Inc 🫶</a><br/>
             Former Animoji Engineer @ <a href='https://support.apple.com/en-gb/HT208986' target='_blank'>Apple</a><br/>
             Pro rollerblader @ <a href='https://clic-n-roll.com' target='_blank'>Clic-n-Roll</a><br/>
             Clothing Brand @ <a href='https://dusk.style' target='_blank'>dusk.</a>
